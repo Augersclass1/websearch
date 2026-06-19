@@ -1,44 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Private Search Portal</title>
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      margin-top: 100px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuckDuckGo Iframe</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
 
-    input {
-      width: 500px;
-      padding: 12px;
-      font-size: 18px;
-    }
-
-    button {
-      padding: 12px 20px;
-      font-size: 18px;
-    }
-  </style>
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-
-<h1>Private Search</h1>
-
-<input id="q" placeholder="Search the web">
-<button onclick="go()">Search</button>
-
-<script>
-function go() {
-  const q = document.getElementById("q").value.trim();
-
-  if (!q) return;
-
-  window.location.href =
-    "https://duckduckgo.com/?q=" +
-    encodeURIComponent(q);
-}
-</script>
-
+    <iframe
+        src="https://duckduckgo.com/"
+        title="DuckDuckGo">
+    </iframe>
 </body>
 </html>
